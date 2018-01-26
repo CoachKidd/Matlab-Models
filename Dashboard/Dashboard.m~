@@ -1,0 +1,94 @@
+%% Load workspace
+% Create a table from workspace variables and view it. When you import data from a
+% file using these functions, each column becomes a table variable.
+%
+% Load project data from the |dashboard| MAT-file to workspace variables.
+
+load dashboard
+whos
+
+%% Create and View Work Items Table.
+% Populate a table with column-oriented variables that contain project data. 
+% You can access and assign table variables by name. When you assign a table 
+% variable from a workspace variable, you can assign the table variable a different 
+% name.
+%
+% Create a table and populate it with the |ID|, |Name|, and |Typeoptional|, as
+% well as these date variables |InBacklog|, |InDevelopment|,
+% |DevDoneReview|, |InTest|, |TestDone|, |DeployedDev| and
+% |SignedOff| workspace variables. Display the first five rows.
+WorkItemsTable = table(ID,Name,Typeoptional,InBacklog,InDevelopment,DevDoneReview,InTest,TestDone,DeployedDev,SignedOff);
+WorkItemsTable(1:5,:)
+
+%% Add Date Calculations.
+% For each start date, and each end date, create a prior Sunday, in a matrix.
+% This will give us the weeks we're going to use for our observations.
+% Takes in the 'InDevelopment' and 'SignedOff' date arrays.
+%
+% Function 'weekday' returns: 
+%   Sun = 1
+%   Mon = 2
+%   Tue = 3
+%   Wed = 4
+%   Thu = 5
+%   Fri = 6
+%   Sat = 7
+%
+PriorSundaysStart = InDevelopment-weekday(InDevelopment)+1;
+PriorSundaysDone = SignedOff-weekday(SignedOff)+1;
+
+% Add these columns to the table.
+WorkItemsTable.PriorSundaysStart = PriorSundaysStart;
+WorkItemsTable.PriorSundaysDone = PriorSundaysDone;
+
+%% Add Wrk Items Cycle Time.
+% Can't seem to edit table directly.
+% MatLab need me to calculate using arrays, and then load these into a
+% table for graphing.
+% This code is redundant.
+%--Start--
+%ThroughputTable.CycleTime = (ThroughputTable.SignedOff)-(ThroughputTable.InDevelopment);
+%ThroughputTable.CycleTime.Format = 'd';
+%--End--
+%
+% Calculate the cycle time each item has taken to complete, format into days.
+% Creates a |CycleTimeDays] array, based on the difference between start
+% and end dates.
+CycleTimeDays = SignedOff - InDevelopment;
+CycleTimeDays.Format = 'd';
+
+% Update any 0 days ('done' same day) to 0.5 days.
+CycleTimeDays(CycleTimeDays == 0) = 0.5;
+
+% Add this column to the table.
+WorkItemsTable.CycleTime = CycleTimeDays;
+
+% Populate the variable units and variable descriptions properties for |CycleTime|.
+% You can add metadata to any table variable to describe further the data
+% contained in the variable.
+% Display the first five rows.
+WorkItemsTable.Properties.VariableUnits{'CycleTime'} = 'Days';
+WorkItemsTable.Properties.VariableDescriptions{'CycleTime'} = 'Cycle Time';
+
+WorkItemsTable(1:5,:)
+
+%% Create and View Throughput Table.
+% Populate a table with column-oriented variables that contain patient data. 
+% You can access and assign table variables by name. When you assign a table 
+% variable from a workspace variable, you can assign the table variable a different 
+% name.
+%
+% Create a table and populate it with the |Gender|, |Smoker|, |Height|, and
+% |Weight| workspace variables. Display the first five rows.
+
+MinWeekStarting = min(PriorSundays);
+MaxWeekStarting = max(PriorSundays);
+
+x = datenum(MaxWeekStarting) - datenum(MinWeekStarting);
+x = x / 7;
+
+ThroughPut = datetime(MinWeekStarting);
+for i = 2:x
+    ThroughPut(i,1) = MinWeekStarting + 7
+    
+end
