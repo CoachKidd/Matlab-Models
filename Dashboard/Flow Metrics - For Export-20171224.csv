@@ -1,68 +1,68 @@
-ID,Link (optional),Name,In Backlog,In Development,"Dev Done, Review",In Test,Test Done,Deployed:Dev,Signed Off,Type (optional),Example Filter B (optional)
-15011,https://agilefactory.visualstudio.com/MTC/_workitems/edit/15011#,Service Manager deletes Check window,23/08/2017,16/10/2017,25/10/2017,25/10/2017,09/11/2017,09/11/2017,10/11/2017,Product Backlog Item,MTC\Sprint 25
-15093,https://agilefactory.visualstudio.com/MTC/_workitems/edit/15093#,Service Manager views data validation errors,25/08/2017,25/10/2017,31/10/2017,02/11/2017,09/11/2017,09/11/2017,10/11/2017,Product Backlog Item,MTC\Sprint 25
-15407,https://agilefactory.visualstudio.com/MTC/_workitems/edit/15407#,Jasmine error on feedback tests,05/09/2017,06/11/2017,06/11/2017,06/11/2017,06/11/2017,06/11/2017,06/11/2017,Bug,MTC\Sprint 25
-16347,https://agilefactory.visualstudio.com/MTC/_workitems/edit/16347#,Generated Pins page: Scaffold UI,02/10/2017,26/10/2017,31/10/2017,06/11/2017,08/11/2017,08/11/2017,08/11/2017,Product Backlog Item,MTC\Sprint 25
-16348,https://agilefactory.visualstudio.com/MTC/_workitems/edit/16348#,Generated Pins Page: Render pupils with Pins,02/10/2017,31/10/2017,31/10/2017,02/11/2017,08/11/2017,09/11/2017,09/11/2017,Product Backlog Item,MTC\Sprint 25
-16921,https://agilefactory.visualstudio.com/MTC/_workitems/edit/16921#,Pupils not taking check: Add reasons - confirmation banner - Update (UX),20/10/2017,20/10/2017,24/10/2017,27/10/2017,09/11/2017,10/11/2017,10/11/2017,Product Backlog Item,MTC\Sprint 25
-16934,https://agilefactory.visualstudio.com/MTC/_workitems/edit/16934#,Update test strategy,20/10/2017,20/10/2017,20/10/2017,20/10/2017,27/10/2017,07/11/2017,08/11/2017,Product Backlog Item,MTC\Sprint 25
-16943,https://agilefactory.visualstudio.com/MTC/_workitems/edit/16943#,Psychometrician's report: cache data during batch run processing,23/10/2017,23/10/2017,03/11/2017,07/11/2017,08/11/2017,09/11/2017,09/11/2017,Product Backlog Item,MTC\Sprint 25
-17000,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17000#,Generate Pins Page - Old Submission,24/10/2017,24/10/2017,26/10/2017,31/10/2017,06/11/2017,06/11/2017,08/11/2017,Product Backlog Item,MTC\Sprint 25
-17176,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17176#,Bind Pupil Scores to UI,30/10/2017,31/10/2017,01/11/2017,01/11/2017,01/11/2017,01/11/2017,08/11/2017,Product Backlog Item,MTC\Sprint 25
-17203,https://agilefactory.visualstudio.com/MTC/_workitems/edit/15203#,SPA: Inputs from multiple checks appear to be found in one completed check,31/10/2017,06/11/2017,06/11/2017,06/11/2017,06/11/2017,06/11/2017,06/11/2017,Bug,MTC\Sprint 25
-17228,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17228#,2 entries per check are appearing in the check collection,31/10/2017,06/11/2017,07/11/2017,07/11/2017,08/11/2017,08/11/2017,10/11/2017,Bug,MTC\Sprint 25
-17233,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17233#,Sticky banner tweaks,31/10/2017,31/10/2017,01/11/2017,06/11/2017,06/11/2017,06/11/2017,08/11/2017,Bug,MTC\Sprint 25
-17250,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17250#,Select/Deselect all refactoring,01/11/2017,01/11/2017,03/11/2017,06/11/2017,06/11/2017,06/11/2017,08/11/2017,Product Backlog Item,MTC\Sprint 25
-17325,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17325#,Duplicate UPN reported when updating Pupil record,03/11/2017,07/11/2017,07/11/2017,09/11/2017,09/11/2017,09/11/2017,10/11/2017,Bug,MTC\Sprint 25
-17379,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17379#,IE11 Edge 15/16 Safari 11- Remove check window modal,07/11/2017,08/11/2017,08/11/2017,09/11/2017,09/11/2017,09/11/2017,10/11/2017,Bug,MTC\Sprint 25
-17380,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17380#,Create new user that is configured to require speech synthesis in the check,07/11/2017,07/11/2017,08/11/2017,08/11/2017,08/11/2017,08/11/2017,13/11/2017,Product Backlog Item,MTC\Sprint 25
-17381,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17381#,Add speech synthesiser config to the data passed to the pupil app,07/11/2017,09/11/2017,09/11/2017,10/11/2017,10/11/2017,10/11/2017,13/11/2017,Product Backlog Item,MTC\Sprint 25
-17382,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17382#,Create a new Speech synthesis service,07/11/2017,08/11/2017,09/11/2017,09/11/2017,09/11/2017,09/11/2017,09/11/2017,Product Backlog Item,MTC\Sprint 25
-17411,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17411#,"Add ""score report"" for UR",08/11/2017,08/11/2017,08/11/2017,08/11/2017,08/11/2017,09/11/2017,09/11/2017,Product Backlog Item,MTC\Sprint 25
-16349,https://agilefactory.visualstudio.com/MTC/_workitems/edit/16349#,Generated Pins Page: Repurpose existing print pins page with 2 columns,02/10/2017,2/11/2017,07/11/2017,09/11/2017,16/11/2017,16/11/2017,16/11/2017,Product Backlog Item,MTC\Sprint 26
-16871,https://agilefactory.visualstudio.com/MTC/_workitems/edit/16871#,Resolve package vulnerabilities,19/10/2017,19/10/2017,15/11/2017,21/11/2017,21/11/2017,21/11/2017,23/11/2017,Bug,MTC\Sprint 26
-17261,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17261#,School Controller:Pupil-Pins Controller: Extract dependencies,01/11/2017,09/11/2017,09/11/2017,15/11/2017,16/11/2017,23/11/2017,23/11/2017,Product Backlog Item,MTC\Sprint 26
-17327,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17327#,Check forms - Create new role,03/11/2017,03/11/2017,08/11/2017,09/11/2017,14/11/2017,14/11/2017,14/11/2017,Product Backlog Item,MTC\Sprint 26
-17330,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17330#,Check forms - Test development landing page,03/11/2017,03/11/2017,08/11/2017,10/11/2017,14/11/2017,14/11/2017,15/11/2017,Product Backlog Item,MTC\Sprint 26
-17337,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17337#,SPA: Expire pin immediately upon check start,06/11/2017,07/11/2017,17/11/2017,20/11/2017,24/11/2017,24/11/2017,24/11/2017,Product Backlog Item,MTC\Sprint 26
-17402,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17402#,Check forms - Review upload and view forms,08/11/2017,08/11/2017,16/11/2017,22/11/2017,24/11/2017,24/11/2017,24/11/2017,Product Backlog Item,MTC\Sprint 26
-17408,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17408#,UX Debt and refactoring: errors summary styling,08/11/2017,08/11/2017,08/11/2017,14/11/2017,24/11/2017,24/11/2017,27/11/2017,Product Backlog Item,MTC\Sprint 26
-17514,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17514#,"""Please confirm"" Dialog box appears on page",10/11/2017,21/11/2017,22/11/2017,22/11/2017,22/11/2017,22/11/2017,22/11/2017,Bug,MTC\Sprint 26
-17517,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17517#,DOB example is not a real date,10/11/2017,21/11/2017,21/11/2017,21/11/2017,21/11/2017,21/11/2017,22/11/2017,Bug,MTC\Sprint 26
-17459,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17459#,Service Manager is unable to edit the time b/w questions,09/11/2017,21/11/2017,21/11/2017,21/11/2017,21/11/2017,21/11/2017,22/11/2017,Bug,MTC\Sprint 26
-17605,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17605#,"Check forms - Sorting, modal, UX, validation",15/11/2017,16/11/2017,22/11/2017,22/11/2017,24/11/2017,27/11/2017,27/11/2017,Product Backlog Item,MTC\Sprint 26
-17567,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17567#,Incorrect summary error message box,14/11/2017,22/11/2017,22/11/2017,24/11/2017,27/11/2017,27/11/2017,27/11/2017,Product Backlog Item,MTC\Sprint 27
-17149,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17149#,Generated Pins Page: Overnight School Password and Pin Clearing,27/10/2017,28/11/2017,28/11/2017,28/11/2017,28/11/2017,28/11/2017,28/11/2017,Product Backlog Item,MTC\Sprint 27
-17592,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17592#,Errors in confirmation message,15/11/2017,28/11/2017,28/11/2017,28/11/2017,28/11/2017,28/11/2017,28/11/2017,Bug,MTC\Sprint 27
-17902,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17902#,Check forms - Extend sorting functionality,29/11/2017,29/11/2017,30/11/2017,04/12/2017,04/12/2017,04/12/2017,04/12/2017,Product Backlog Item,MTC\Sprint 27
-17516,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17516#,UPN Summary displays incorrect copy and position of hyperlink,10/11/2017,21/11/2017,21/11/2017,24/11/2017,24/11/2017,24/11/2017,29/11/2017,Product Backlog Item,MTC\Sprint 27
-17706,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17706#,Restarts: Scaffolding UI Restarts Page Landing Page,21/11/2017,21/11/2017,21/11/2017,28/11/2017,30/11/2017,05/12/2017,05/12/2017,Product Backlog Item,MTC\Sprint 27
-17745,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17745#,update the govuk_template_ejs package and associated govuk_template assets folder,22/11/2017,22/11/2017,22/11/2017,24/11/2017,01/12/2017,01/12/2017,04/12/2017,Product Backlog Item,MTC\Sprint 27
-17916,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17916#,Spike: tech to play sound file,29/11/2017,29/11/2017,29/11/2017,30/11/2017,30/11/2017,30/11/2017,30/11/2017,Product Backlog Item,MTC\Sprint 27
-17984,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17984#,"service-manager controller -> check-window, setting, setting-log models",30/11/2017,01/12/2017,04/12/2017,04/12/2017,04/12/2017,04/12/2017,04/12/2017,Product Backlog Item,MTC\Sprint 27
-17980,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17980#,check-form controller (dependencies on check-form model),30/11/2017,04/12/2017,04/12/2017,04/12/2017,04/12/2017,04/12/2017,07/12/2017,Product Backlog Item,MTC\Sprint 27
-17707,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17707#,Restarts: Scaffold UI Select list of pupils to restart,21/11/2017,21/11/2017,24/11/2017,30/11/2017,01/12/2017,07/12/2017,07/12/2017,Product Backlog Item,MTC\Sprint 27
-17711,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17711#,Restarts: Restarts Submission,21/11/2017,24/11/2017,30/11/2017,05/12/2017,05/12/2017,07/12/2017,07/12/2017,Product Backlog Item,MTC\Sprint 27
-17383,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17383#,Speech synth: output sound,07/11/2017,10/11/2017,21/11/2017,24/11/2017,30/11/2017,30/11/2017,30/11/2017,Product Backlog Item,MTC\Sprint 27
-17604,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17604#,Check forms - Review and refactor check form page,15/11/2017,21/11/2017,29/11/2017,05/12/2017,06/12/2017,07/12/2017,07/12/2017,Product Backlog Item,MTC\Sprint 27
-17981,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17981#,pupil-feedback controller (deps on pupil-feedback model),30/11/2017,06/12/2017,06/12/2017,06/12/2017,06/12/2017,06/12/2017,07/12/2017,Product Backlog Item,MTC\Sprint 27
-17982,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17982#,pupil controller -> deps on pupil and school models,30/11/2017,04/12/2017,06/12/2017,06/12/2017,06/12/2017,06/12/2017,07/12/2017,Product Backlog Item,MTC\Sprint 27
-17983,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17983#,school controller -> dept on school and pupil models,30/11/2017,07/12/2017,08/12/2017,08/12/2017,08/12/2017,08/12/2017,14/12/2017,Product Backlog Item,MTC\Sprint 28
-17917,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17917#,Choose sound file to play,29/11/2017,12/12/2017,12/12/2017,12/12/2017,12/12/2017,12/12/2017,14/12/2017,Product Backlog Item,MTC\Sprint 27
-17904,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17904#,Check forms - Use file name as form name,29/11/2017,30/11/2017,04/12/2017,07/12/2017,07/12/2017,08/12/2017,14/12/2017,Bug,MTC\Sprint 27
-17985,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17985#,pupil.service depends on pupil model directly,30/11/2017,08/12/2017,08/12/2017,13/12/2017,13/12/2017,13/12/2017,14/12/2017,Product Backlog Item,MTC\Sprint 27
-17713,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17713#,Restarts: Scaffold UI Recorded Restarts Page,21/11/2017,30/11/2017,04/12/2017,08/12/2017,14/12/2017,19/12/2017,20/12/2017,Product Backlog Item,MTC\Sprint 27
-17714,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17714#,Restarts: Remove Restart,21/11/2017,4/12/2017,07/12/2017,08/12/2017,14/12/2017,20/12/2017,20/12/2017,Product Backlog Item,MTC\Sprint 27
-17403,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17403#,Check forms - Assign forms to check window,08/11/2017,04/12/2017,08/12/2017,08/12/2017,18/12/2017,18/12/2017,20/12/2017,Product Backlog Item,MTC\Sprint 27
-18120,https://agilefactory.visualstudio.com/MTC/_workitems/edit/18120#,Sticky banner counting,08/12/2017,08/12/2017,13/12/2017,14/12/2017,18/12/2017,19/12/2017,20/12/2017,Bug,MTC\Sprint 27
-18189,https://agilefactory.visualstudio.com/MTC/_workitems/edit/18189#,Groups - Create initial page,13/12/2017,13/12/2017,15/12/2017,18/12/2017,18/12/2017,20/12/2017,20/12/2017,Product Backlog Item,MTC\Sprint 28
-18110,https://agilefactory.visualstudio.com/MTC/_workitems/edit/18110#,Pupil Register Page: Display all possible outcomes,08/12/2017,12/12/2017,18/12/2017,19/12/2017,22/12/2017,22/12/2017,22/12/2017,Product Backlog Item,MTC\Sprint 28
-18173,https://agilefactory.visualstudio.com/MTC/_workitems/edit/18173#,dev environment setup,12/12/2017,13/12/2017,13/12/2017,19/12/2017,19/12/2017,19/12/2017,19/12/2017,Product Backlog Item,MTC\Sprint 28
-16824,https://agilefactory.visualstudio.com/MTC/_workitems/edit/16824#,Application Debug Logging,18/10/2017,19/12/2017,20/12/2017,20/12/2017,20/12/2017,20/12/2017,20/12/2017,Product Backlog Item,MTC\Sprint 28
-18255,https://agilefactory.visualstudio.com/MTC/_workitems/edit/18255#,Change - Update Pupil Register with Status - Complete,15/12/2017,20/12/2017,20/12/2017,20/12/2017,20/12/2017,20/12/2017,20/12/2017,Product Backlog Item,MTC\Sprint 28
-17566,https://agilefactory.visualstudio.com/MTC/_workitems/edit/17566#,Lowercase names are treated differently,14/11/2017,08/12/2017,08/12/2017,13/12/2017,18/12/2017,,,Bug,MTC\Sprint 28
-18176,https://agilefactory.visualstudio.com/MTC/_workitems/edit/18176#,Automation tests: prep work,12/12/2017,20/12/2017,21/12/2017,,,,,Product Backlog Item,MTC\Sprint 28
-18301,https://agilefactory.visualstudio.com/MTC/_workitems/edit/181301#,Settings Data Service: Refactor to SQL Server,19/12/2017,19/12/2017,21/12/2017,,,,,Product Backlog Item,MTC\Sprint 28
-18316,https://agilefactory.visualstudio.com/MTC/_workitems/edit/18316#,user.school_id should be nullable,20/12/2017,21/12/2017,22/12/2017,,,,,Product Backlog Item,MTC\Sprint 28
-18199,https://agilefactory.visualstudio.com/MTC/_workitems/edit/18199#,Refactor school data service to use SQL Server,13/12/2017,20/12/2017,,,,,,Product Backlog Item,MTC\Sprint 28
-16999,https://agilefactory.visualstudio.com/MTC/_workitems/edit/16999#,End of Check Submission Process,24/10/2017,19/12/2017,,,,,,Product Backlog Item,MTC\Sprint 28
+ID,In Backlog,In Development,"Dev Done, Review",In Test,Test Done,Deployed:Dev,Signed Off,Type (optional),Example Filter B (optional)
+15011,23/08/2017,16/10/2017,25/10/2017,25/10/2017,09/11/2017,09/11/2017,10/11/2017,Product Backlog Item,MTC\Sprint 25
+15093,25/08/2017,25/10/2017,31/10/2017,02/11/2017,09/11/2017,09/11/2017,10/11/2017,Product Backlog Item,MTC\Sprint 25
+15407,05/09/2017,06/11/2017,06/11/2017,06/11/2017,06/11/2017,06/11/2017,06/11/2017,Bug,MTC\Sprint 25
+16347,02/10/2017,26/10/2017,31/10/2017,06/11/2017,08/11/2017,08/11/2017,08/11/2017,Product Backlog Item,MTC\Sprint 25
+16348,02/10/2017,31/10/2017,31/10/2017,02/11/2017,08/11/2017,09/11/2017,09/11/2017,Product Backlog Item,MTC\Sprint 25
+16921,20/10/2017,20/10/2017,24/10/2017,27/10/2017,09/11/2017,10/11/2017,10/11/2017,Product Backlog Item,MTC\Sprint 25
+16934,20/10/2017,20/10/2017,20/10/2017,20/10/2017,27/10/2017,07/11/2017,08/11/2017,Product Backlog Item,MTC\Sprint 25
+16943,23/10/2017,23/10/2017,03/11/2017,07/11/2017,08/11/2017,09/11/2017,09/11/2017,Product Backlog Item,MTC\Sprint 25
+17000,24/10/2017,24/10/2017,26/10/2017,31/10/2017,06/11/2017,06/11/2017,08/11/2017,Product Backlog Item,MTC\Sprint 25
+17176,30/10/2017,31/10/2017,01/11/2017,01/11/2017,01/11/2017,01/11/2017,08/11/2017,Product Backlog Item,MTC\Sprint 25
+17203,31/10/2017,06/11/2017,06/11/2017,06/11/2017,06/11/2017,06/11/2017,06/11/2017,Bug,MTC\Sprint 25
+17228,31/10/2017,06/11/2017,07/11/2017,07/11/2017,08/11/2017,08/11/2017,10/11/2017,Bug,MTC\Sprint 25
+17233,31/10/2017,31/10/2017,01/11/2017,06/11/2017,06/11/2017,06/11/2017,08/11/2017,Bug,MTC\Sprint 25
+17250,01/11/2017,01/11/2017,03/11/2017,06/11/2017,06/11/2017,06/11/2017,08/11/2017,Product Backlog Item,MTC\Sprint 25
+17325,03/11/2017,07/11/2017,07/11/2017,09/11/2017,09/11/2017,09/11/2017,10/11/2017,Bug,MTC\Sprint 25
+17379,07/11/2017,08/11/2017,08/11/2017,09/11/2017,09/11/2017,09/11/2017,10/11/2017,Bug,MTC\Sprint 25
+17380,07/11/2017,07/11/2017,08/11/2017,08/11/2017,08/11/2017,08/11/2017,13/11/2017,Product Backlog Item,MTC\Sprint 25
+17381,07/11/2017,09/11/2017,09/11/2017,10/11/2017,10/11/2017,10/11/2017,13/11/2017,Product Backlog Item,MTC\Sprint 25
+17382,07/11/2017,08/11/2017,09/11/2017,09/11/2017,09/11/2017,09/11/2017,09/11/2017,Product Backlog Item,MTC\Sprint 25
+17411,08/11/2017,08/11/2017,08/11/2017,08/11/2017,08/11/2017,09/11/2017,09/11/2017,Product Backlog Item,MTC\Sprint 25
+16349,02/10/2017,02/11/2017,07/11/2017,09/11/2017,16/11/2017,16/11/2017,16/11/2017,Product Backlog Item,MTC\Sprint 26
+16871,19/10/2017,19/10/2017,15/11/2017,21/11/2017,21/11/2017,21/11/2017,23/11/2017,Bug,MTC\Sprint 26
+17261,01/11/2017,09/11/2017,09/11/2017,15/11/2017,16/11/2017,23/11/2017,23/11/2017,Product Backlog Item,MTC\Sprint 26
+17327,03/11/2017,03/11/2017,08/11/2017,09/11/2017,14/11/2017,14/11/2017,14/11/2017,Product Backlog Item,MTC\Sprint 26
+17330,03/11/2017,03/11/2017,08/11/2017,10/11/2017,14/11/2017,14/11/2017,15/11/2017,Product Backlog Item,MTC\Sprint 26
+17337,06/11/2017,07/11/2017,17/11/2017,20/11/2017,24/11/2017,24/11/2017,24/11/2017,Product Backlog Item,MTC\Sprint 26
+17402,08/11/2017,08/11/2017,16/11/2017,22/11/2017,24/11/2017,24/11/2017,24/11/2017,Product Backlog Item,MTC\Sprint 26
+17408,08/11/2017,08/11/2017,08/11/2017,14/11/2017,24/11/2017,24/11/2017,27/11/2017,Product Backlog Item,MTC\Sprint 26
+17514,10/11/2017,21/11/2017,22/11/2017,22/11/2017,22/11/2017,22/11/2017,22/11/2017,Bug,MTC\Sprint 26
+17517,10/11/2017,21/11/2017,21/11/2017,21/11/2017,21/11/2017,21/11/2017,22/11/2017,Bug,MTC\Sprint 26
+17459,09/11/2017,21/11/2017,21/11/2017,21/11/2017,21/11/2017,21/11/2017,22/11/2017,Bug,MTC\Sprint 26
+17605,15/11/2017,16/11/2017,22/11/2017,22/11/2017,24/11/2017,27/11/2017,27/11/2017,Product Backlog Item,MTC\Sprint 26
+17567,14/11/2017,22/11/2017,22/11/2017,24/11/2017,27/11/2017,27/11/2017,27/11/2017,Product Backlog Item,MTC\Sprint 27
+17149,27/10/2017,28/11/2017,28/11/2017,28/11/2017,28/11/2017,28/11/2017,28/11/2017,Product Backlog Item,MTC\Sprint 27
+17592,15/11/2017,28/11/2017,28/11/2017,28/11/2017,28/11/2017,28/11/2017,28/11/2017,Bug,MTC\Sprint 27
+17902,29/11/2017,29/11/2017,30/11/2017,04/12/2017,04/12/2017,04/12/2017,04/12/2017,Product Backlog Item,MTC\Sprint 27
+17516,10/11/2017,21/11/2017,21/11/2017,24/11/2017,24/11/2017,24/11/2017,29/11/2017,Product Backlog Item,MTC\Sprint 27
+17706,21/11/2017,21/11/2017,21/11/2017,28/11/2017,30/11/2017,05/12/2017,05/12/2017,Product Backlog Item,MTC\Sprint 27
+17745,22/11/2017,22/11/2017,22/11/2017,24/11/2017,01/12/2017,01/12/2017,04/12/2017,Product Backlog Item,MTC\Sprint 27
+17916,29/11/2017,29/11/2017,29/11/2017,30/11/2017,30/11/2017,30/11/2017,30/11/2017,Product Backlog Item,MTC\Sprint 27
+17984,30/11/2017,01/12/2017,04/12/2017,04/12/2017,04/12/2017,04/12/2017,04/12/2017,Product Backlog Item,MTC\Sprint 27
+17980,30/11/2017,04/12/2017,04/12/2017,04/12/2017,04/12/2017,04/12/2017,07/12/2017,Product Backlog Item,MTC\Sprint 27
+17707,21/11/2017,21/11/2017,24/11/2017,30/11/2017,01/12/2017,07/12/2017,07/12/2017,Product Backlog Item,MTC\Sprint 27
+17711,21/11/2017,24/11/2017,30/11/2017,05/12/2017,05/12/2017,07/12/2017,07/12/2017,Product Backlog Item,MTC\Sprint 27
+17383,07/11/2017,10/11/2017,21/11/2017,24/11/2017,30/11/2017,30/11/2017,30/11/2017,Product Backlog Item,MTC\Sprint 27
+17604,15/11/2017,21/11/2017,29/11/2017,05/12/2017,06/12/2017,07/12/2017,07/12/2017,Product Backlog Item,MTC\Sprint 27
+17981,30/11/2017,06/12/2017,06/12/2017,06/12/2017,06/12/2017,06/12/2017,07/12/2017,Product Backlog Item,MTC\Sprint 27
+17982,30/11/2017,04/12/2017,06/12/2017,06/12/2017,06/12/2017,06/12/2017,07/12/2017,Product Backlog Item,MTC\Sprint 27
+17983,30/11/2017,07/12/2017,08/12/2017,08/12/2017,08/12/2017,08/12/2017,14/12/2017,Product Backlog Item,MTC\Sprint 28
+17917,29/11/2017,12/12/2017,12/12/2017,12/12/2017,12/12/2017,12/12/2017,14/12/2017,Product Backlog Item,MTC\Sprint 27
+17904,29/11/2017,30/11/2017,04/12/2017,07/12/2017,07/12/2017,08/12/2017,14/12/2017,Bug,MTC\Sprint 27
+17985,30/11/2017,08/12/2017,08/12/2017,13/12/2017,13/12/2017,13/12/2017,14/12/2017,Product Backlog Item,MTC\Sprint 27
+17713,21/11/2017,30/11/2017,04/12/2017,08/12/2017,14/12/2017,19/12/2017,20/12/2017,Product Backlog Item,MTC\Sprint 27
+17714,21/11/2017,04/12/2017,07/12/2017,08/12/2017,14/12/2017,20/12/2017,20/12/2017,Product Backlog Item,MTC\Sprint 27
+17403,08/11/2017,04/12/2017,08/12/2017,08/12/2017,18/12/2017,18/12/2017,20/12/2017,Product Backlog Item,MTC\Sprint 27
+18120,08/12/2017,08/12/2017,13/12/2017,14/12/2017,18/12/2017,19/12/2017,20/12/2017,Bug,MTC\Sprint 27
+18189,13/12/2017,13/12/2017,15/12/2017,18/12/2017,18/12/2017,20/12/2017,20/12/2017,Product Backlog Item,MTC\Sprint 28
+18110,08/12/2017,12/12/2017,18/12/2017,19/12/2017,22/12/2017,22/12/2017,22/12/2017,Product Backlog Item,MTC\Sprint 28
+18173,12/12/2017,13/12/2017,13/12/2017,19/12/2017,19/12/2017,19/12/2017,19/12/2017,Product Backlog Item,MTC\Sprint 28
+16824,18/10/2017,19/12/2017,20/12/2017,20/12/2017,20/12/2017,20/12/2017,20/12/2017,Product Backlog Item,MTC\Sprint 28
+18255,15/12/2017,20/12/2017,20/12/2017,20/12/2017,20/12/2017,20/12/2017,20/12/2017,Product Backlog Item,MTC\Sprint 28
+17566,14/11/2017,08/12/2017,08/12/2017,13/12/2017,18/12/2017,,,Bug,MTC\Sprint 28
+18176,12/12/2017,20/12/2017,21/12/2017,,,,,Product Backlog Item,MTC\Sprint 28
+18301,19/12/2017,19/12/2017,21/12/2017,,,,,Product Backlog Item,MTC\Sprint 28
+18316,20/12/2017,21/12/2017,22/12/2017,,,,,Product Backlog Item,MTC\Sprint 28
+18199,13/12/2017,20/12/2017,,,,,,Product Backlog Item,MTC\Sprint 28
+16999,24/10/2017,19/12/2017,,,,,,Product Backlog Item,MTC\Sprint 28
