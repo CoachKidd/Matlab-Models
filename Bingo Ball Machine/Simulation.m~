@@ -44,26 +44,62 @@ for SchoolCount = 1:1:NumSchools
     %disp(Display)
     
 end
-%% Generate Bar Charts
-% Create the bar charts.
-
-CreateBarChartBoys(ScorecardBoys);
-CreateBarChartGirls(ScorecardGirls);
 
 %% Calculate Stats
 %
-tmpBoysMin = min(ScorecardBoys);
-tmpBoysMax = max(ScorecardBoys);
-tmpBoysMean = mean(ScorecardBoys);
 
+DaybookStatisticsBoys = UpdateDayBooks(DaybookStatisticsBoys,'DaybookStatisticsBoys');
 
+if exist('DaybookStatisticsBoys','var') == 0
+    DaybookStatisticsBoys = table();
+    % Add this column to the table.
+    DaybookStatisticsBoys.BoysMin = min(ScorecardBoys);
+    DaybookStatisticsBoys.Boys25Quantile = quantile(ScorecardBoys,.25);
+    DaybookStatisticsBoys.BoysMedian = median(ScorecardBoys);
+    DaybookStatisticsBoys.BoysMean = mean(ScorecardBoys);
+    DaybookStatisticsBoys.Boys50Quantile = quantile(ScorecardBoys,.50);
+    DaybookStatisticsBoys.Boys75Quantile = quantile(ScorecardBoys,.75);
+    DaybookStatisticsBoys.BoysMax = max(ScorecardBoys);
+    DaybookStatisticsBoys.BoysSD = std(ScorecardBoys);
+    DaybookStatisticsBoys.BoysVar = var(ScorecardBoys);
+    
+else
+    RowCount = size(DaybookStatisticsBoys,1);
+    % Add these values in a new row in the table.
+    DaybookStatisticsBoys.BoysMin(RowCount+1) = min(ScorecardBoys);
+    DaybookStatisticsBoys.Boys25Quantile(RowCount+1) = quantile(ScorecardBoys,.25);
+    DaybookStatisticsBoys.BoysMedian(RowCount+1) = median(ScorecardBoys);
+    DaybookStatisticsBoys.BoysMean(RowCount+1) = mean(ScorecardBoys);
+    DaybookStatisticsBoys.Boys50Quantile(RowCount+1) = quantile(ScorecardBoys,.50);
+    DaybookStatisticsBoys.Boys75Quantile(RowCount+1) = quantile(ScorecardBoys,.75);
+    DaybookStatisticsBoys.BoysMax(RowCount+1) = max(ScorecardBoys);
+    DaybookStatisticsBoys.BoysSD(RowCount+1) = std(ScorecardBoys);
+    DaybookStatisticsBoys.BoysVar(RowCount+1) = var(ScorecardBoys);
+end
+
+% Tidy up.
+%vars = {'RowCount'};
+%clear(vars{:});
+
+%% Generate Bar Charts
+% Create the bar charts.
+CreateBarChartBoys(ScorecardBoys);
+CreateBarChartGirls(ScorecardGirls);
 
 %% Generate Boxplots
 % Create the boxplots.
-tmpBoysMin = min(ScorecardBoys);
-
 figure3 = figure('Name','Boxplot - Boys');
 boxplot(ScorecardBoys);
 title('Boxplot of Check Distribution - Boys');
 ylabel('Check Form Usage Count');
 
+% Overlay the mean as green diamonds
+hold on
+plot(mean(ScorecardBoys), 'dg')
+hold off
+
+%% Generate Histograms
+% Create the histograms.
+CreateHistogramBoys(ScorecardBoys);
+ylabel({'Check Form Distribution'});
+title({'Histogram of Check Distribution - Boys'});

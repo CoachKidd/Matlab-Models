@@ -44,26 +44,38 @@ for SchoolCount = 1:1:NumSchools
     %disp(Display)
     
 end
+
+%% Update Day Books with Calculated Stats.
+%
+
+DaybookStatisticsBoys = UpdateDayBooks(DaybookStatisticsBoys,'DaybookStatisticsBoys',ScorecardBoys);
+DaybookStatisticsGirls = UpdateDayBooks(DaybookStatisticsGirl,'DaybookStatisticsGirls',ScorecardGirls);
+
+DaybookScorecardBoys = UpdateDayBooks(DaybookScorecardBoys,'DaybookScorecardBoys',ScorecardBoys);
+
+% Tidy up.
+%vars = {'RowCount'};
+%clear(vars{:});
+
 %% Generate Bar Charts
 % Create the bar charts.
-
 CreateBarChartBoys(ScorecardBoys);
 CreateBarChartGirls(ScorecardGirls);
 
-%% Calculate Stats
-%
-tmpBoysMin = min(ScorecardBoys);
-tmpBoysMax = max(ScorecardBoys);
-tmpBoysMean = mean(ScorecardBoys);
-tmpBoysQuantiles = quantile(ScorecardBoys,[.25 .5 .75])
-
-
 %% Generate Boxplots
 % Create the boxplots.
-tmpBoysMin = min(ScorecardBoys);
-
 figure3 = figure('Name','Boxplot - Boys');
 boxplot(ScorecardBoys);
 title('Boxplot of Check Distribution - Boys');
 ylabel('Check Form Usage Count');
 
+% Overlay the mean as green diamonds
+hold on
+plot(mean(ScorecardBoys), 'dg')
+hold off
+
+%% Generate Histograms
+% Create the histograms.
+CreateHistogramBoys(ScorecardBoys);
+ylabel({'Check Form Distribution'});
+title({'Histogram of Check Distribution - Boys'});
