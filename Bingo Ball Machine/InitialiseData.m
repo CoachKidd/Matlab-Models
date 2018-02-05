@@ -131,8 +131,27 @@ NumBalls = NumCheckForms;
 %% Create Day Books.
 % Create arrays to store simulation statistics. 
 
-DaybookStatisticsBoys = table();
-DaybookStatisticsGirls = table();
 
+% Tables - so that row headers can be set, for ease of reading.
+%DaybookStatisticsBoys = table();
+%DaybookStatisticsBoys = cell2table(cell(0,9));
+%DaybookStatisticsBoys = array2table(zeros(0,9));
+%DaybookStatisticsBoys.Properties.VariableNames = {'BoysMin','Boys25Quantile','BoysMedian','BoysMean','Boys50Quantile','Boys50Quantile','Boys75Quantile','BoysMax','BoysSD','BoysVar'};
+% Add this column to the table.
+%DaybookStatisticsBoys.Properties.VariableDescriptions{'BoysMin'} = 'Boys_Min';
+
+%DaybookStatisticsBoys.BoysMin{RowCount+1} = min(ScorecardBoys);
+%DaybookStatisticsBoys.Boys25Quantile{RowCount+1,1} = quantile(ScorecardBoys,.25);
+%DaybookStatisticsBoys.BoysMedian{RowCount+1,1} = median(ScorecardBoys);
+%DaybookStatisticsBoys.BoysMean{RowCount+1,1} = mean(ScorecardBoys);
+%DaybookStatisticsBoys.Boys50Quantile{RowCount+1,1} = quantile(ScorecardBoys,.50);
+%DaybookStatisticsBoys.Boys75Quantile{RowCount+1,1} = quantile(ScorecardBoys,.75);
+%DaybookStatisticsBoys.BoysMax{RowCount+1,1} = max(ScorecardBoys);
+%DaybookStatisticsBoys.BoysSD{RowCount+1,1} = std(ScorecardBoys);
+%DaybookStatisticsBoys.BoysVar{RowCount+1,1} = var(ScorecardBoys);
+
+%DaybookStatisticsGirls = table();
+
+%% Arrays - for ease of concatenating new data each iteration.
 DaybookScorecardBoys = zeros(0,20);
 DaybookScorecardGirls = zeros(0,20);

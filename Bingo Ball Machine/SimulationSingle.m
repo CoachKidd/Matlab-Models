@@ -39,29 +39,50 @@ for SchoolCount = 1:1:NumSchools
         
     end    
     
-    % Display what we've done.
-    %Display = ['SchoolCount=', num2str(SchoolCount), ', BoyCount=', num2str(BoyCount), ', GirlCount=', num2str(GirlCount)];
-    %disp(Display)
-    
 end
 
 %% Update Day Books with Calculated Stats.
 %
 
-% The day book for the Check Form distributuion statistics for the boys.
-RowCount = size(DaybookStatisticsBoys,1);
-% Add these values in a new row in the table.
-DaybookStatisticsBoys.BoysMin(RowCount+1) = min(ScorecardBoys);
-DaybookStatisticsBoys.Boys25Quantile(RowCount+1) = quantile(ScorecardBoys,.25);
-DaybookStatisticsBoys.BoysMedian(RowCount+1) = median(ScorecardBoys);
-DaybookStatisticsBoys.BoysMean(RowCount+1) = mean(ScorecardBoys);
-DaybookStatisticsBoys.Boys50Quantile(RowCount+1) = quantile(ScorecardBoys,.50);
-DaybookStatisticsBoys.Boys75Quantile(RowCount+1) = quantile(ScorecardBoys,.75);
-DaybookStatisticsBoys.BoysMax(RowCount+1) = max(ScorecardBoys);
-DaybookStatisticsBoys.BoysSD(RowCount+1) = std(ScorecardBoys);
-DaybookStatisticsBoys.BoysVar(RowCount+1) = var(ScorecardBoys);
+if exist('DaybookStatisticsBoys','var') == 0 
+    % Add these values in a new row in the table.;
+    DaybookStatisticsBoys = table();
+    DaybookStatisticsBoys.Properties.VariableNames = {'BoysMin','Boys25Quantile','BoysMedian','BoysMean','Boys50Quantile','Boys75Quantile','BoysMax','BoysSD','BoysVar'};
+    DaybookStatisticsBoys{1,1} = min(ScorecardBoys);
+    DaybookStatisticsBoys{1,2} = quantile(ScorecardBoys,.25);
+    DaybookStatisticsBoys{1,3} = median(ScorecardBoys);
+    DaybookStatisticsBoys{1,4} = mean(ScorecardBoys);
+    DaybookStatisticsBoys{1,5} = quantile(ScorecardBoys,.50);
+    DaybookStatisticsBoys{1,6} = quantile(ScorecardBoys,.75);
+    DaybookStatisticsBoys{1,7} = max(ScorecardBoys);
+    DaybookStatisticsBoys{1,8} = std(ScorecardBoys);
+    DaybookStatisticsBoys{1,9} = var(ScorecardBoys);
+else
+    % Check the day book for the current number of rows.
+    RowCount = size(DaybookStatisticsBoys,1);
+    % Add these values in a new row in the table.
+    DaybookStatisticsBoys{RowCount+1,1} = min(ScorecardBoys);
+    DaybookStatisticsBoys{RowCount+1,2} = quantile(ScorecardBoys,.25);
+    DaybookStatisticsBoys{RowCount+1,3} = median(ScorecardBoys);
+    DaybookStatisticsBoys{RowCount+1,4} = mean(ScorecardBoys);
+    DaybookStatisticsBoys{RowCount+1,5} = quantile(ScorecardBoys,.50);
+    DaybookStatisticsBoys{RowCount+1,6} = quantile(ScorecardBoys,.75);
+    DaybookStatisticsBoys{RowCount+1,7} = max(ScorecardBoys);
+    DaybookStatisticsBoys{RowCount+1,8} = std(ScorecardBoys);
+    DaybookStatisticsBoys{RowCount+1,9} = var(ScorecardBoys);
+end
 
-% The day book for the Check Form distributuion statistics for the girls.
+
+
+% Assuming that table 'volTbl' exists in the workspace with a column 'Variance'
+%>> volTbl.Variance = [];
+% In case 'v' is a scalar value, use the syntax 'table.ColumnName{rowNumber, colNumber} = value' to assign the value of 'v' into a cell in the 'Variance' column of the table.
+%>> volTbl.Variance{1,1} = v;
+% In case 'v' is a matrix, use the syntax 'table.ColumnName = v' where v is a cell matrix whose number of rows is equal to the number of rows in the table.
+%volTbl.Variance = v;
+
+
+%% The day book for the Check Form distributuion statistics for the girls.
 RowCount = size(DaybookStatisticsGirls,1);
 % Add these values in a new row in the table.
 DaybookStatisticsGirls.GirlsMin(RowCount+1) = min(ScorecardGirls);
@@ -74,7 +95,7 @@ DaybookStatisticsGirls.GirlsMax(RowCount+1) = max(ScorecardGirls);
 DaybookStatisticsGirls.GirlsSD(RowCount+1) = std(ScorecardGirls);
 DaybookStatisticsGirls.GirlsVar(RowCount+1) = var(ScorecardGirls);
 
-%Concatenate the new Scorecard data to the bottom of the Daybooks.
+%% Concatenate the new Scorecard data to the bottom of the Daybooks.
 if size(DaybookScorecardBoys,1) == 0
     DaybookScorecardBoys = ScorecardBoys;
 else
