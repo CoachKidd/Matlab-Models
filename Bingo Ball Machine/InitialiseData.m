@@ -129,10 +129,10 @@ BingoBallMachine = LoadBalls(NumCheckForms);
 NumBalls = NumCheckForms;
 
 %% Create Day Books.
-% Create tables to store simulation statistics. 
-%
-% Create a double array |NumBalls|.
+% Create arrays to store simulation statistics. 
+
 DaybookStatisticsBoys = table();
 DaybookStatisticsGirls = table();
-DaybookScorecardBoys = table();
-DaybookScorecardGirls = table();
+
+DaybookScorecardBoys = zeros(0,20);
+DaybookScorecardGirls = zeros(0,20);
