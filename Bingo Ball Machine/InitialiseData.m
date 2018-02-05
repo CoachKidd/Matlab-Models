@@ -98,6 +98,12 @@ clearvars filename delimiter startRow formatSpec fileID dataArray ans raw col nu
 % Create a double array |NumCheckForms|.
 NumCheckForms = 20;
 
+%% Create Simulations Variable.
+% Create and populate a vector with a variable that contains the number of Simluations we'll perform. 
+%
+% Create a double array |NumSimulations|.
+NumSimulations = 100;
+
 %% Create ScorecardBoys Vector.
 % Create and initilise a vector for storing the Check Form allocation to boys. 
 %
