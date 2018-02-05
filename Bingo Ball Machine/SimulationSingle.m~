@@ -74,8 +74,7 @@ DaybookStatisticsGirls.GirlsMax(RowCount+1) = max(ScorecardGirls);
 DaybookStatisticsGirls.GirlsSD(RowCount+1) = std(ScorecardGirls);
 DaybookStatisticsGirls.GirlsVar(RowCount+1) = var(ScorecardGirls);
 
-%Concatenate the new ScorecardGirls data to the bottom of the
-%DaybookScorecardGirls.
+%Concatenate the new Scorecard data to the bottom of the Daybooks.
 if size(DaybookScorecardBoys,1) == 0
     DaybookScorecardBoys = ScorecardBoys;
 else
@@ -88,11 +87,9 @@ else
     DaybookScorecardGirls = [DaybookScorecardGirls; ScorecardGirls];
 end
 
-
-
 % Tidy up.
-%vars = {'i','RowCount'};
-%clear(vars{:});
+vars = {'RowCount'};
+clear(vars{:});
 
 %% Generate Bar Charts
 % Create the bar charts.
