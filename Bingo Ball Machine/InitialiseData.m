@@ -102,7 +102,7 @@ NumCheckForms = 20;
 % Create and populate a vector with a variable that contains the number of Simluations we'll perform. 
 %
 % Create a double array |NumSimulations|.
-NumSimulations = 100;
+NumSimulations = 10;
 
 %% Create ScorecardBoys Vector.
 % Create and initilise a vector for storing the Check Form allocation to boys. 
@@ -134,13 +134,22 @@ BingoBallMachine = LoadBalls(NumCheckForms);
 % Create a double array |NumBalls|.
 NumBalls = NumCheckForms;
 
+%% Create Statistics Array.
+% Create array to store statistics for base data - distribution of Year 4 boys and girls for the population of schools.
+% Row 1 = Boys
+% Row 2 = Girls
+% Row 3 = Combined
+DataStatistics = zeros(3,7);
+
 %% Create Day Books.
 % Create arrays to store simulation statistics. 
 
 % Arrays - for ease of concatenating new data each iteration.
-DaybookStatisticsBoys = zeros(0,9);
-DaybookStatisticsGirls = zeros(0,9);
+DaybookStatisticsBoys = zeros(NumSimulations,8);
+DaybookStatisticsGirls = zeros(NumSimulations,8);
 
-% Arrays - for ease of concatenating new data each iteration.
-DaybookScorecardBoys = zeros(0,20);
-DaybookScorecardGirls = zeros(0,20);
+DaybookScorecardBoys = zeros(NumSimulations,20);
+DaybookScorecardGirls = zeros(NumSimulations,20);
+
+%% Report the iteration count to the command window.
+disp(['Initialisation for ' num2str(NumSimulations) ' iterations of ' num2str(NumCheckForms) ' Check Forms complete.'])

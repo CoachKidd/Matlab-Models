@@ -1,5 +1,5 @@
 %% Reset the scorecards
-% ...
+% Pre-allocating array size is less expensive in memory allocation.
 ScorecardGirls = zeros(1,NumCheckForms);
 ScorecardBoys = zeros(1,NumCheckForms);
 
@@ -41,6 +41,18 @@ for SchoolCount = 1:1:NumSchools
     
 end
 
+%% Update data statistics
+%
+
+DataStatistics(1,1) = min(SchoolsData(:,2));
+DataStatistics(1,2) = quantile(ScorecardBoys,.25);
+DataStatistics(1,3) = median(ScorecardBoys);
+DataStatistics(1,4) = mean(ScorecardBoys);
+DataStatistics(1,5) = quantile(ScorecardBoys,.50);
+DataStatistics(1,6) = quantile(ScorecardBoys,.75);
+DataStatistics(1,7) = max(ScorecardBoys);
+DataStatistics(1,8) = std(ScorecardBoys);
+DataStatistics(1,9) = var(ScorecardBoys);
 %% Update Day Books with Calculated Stats.
 %
 % Note: Abandoned using tables for the daybooks. Advantage was inbuilt row

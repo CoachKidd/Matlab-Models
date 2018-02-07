@@ -1,121 +1,141 @@
-%% Reset the scorecards
+%% Iitialise Simulation Loop
 % ...
-ScorecardGirls = zeros(1,NumCheckForms);
-ScorecardBoys = zeros(1,NumCheckForms);
 
-%% Initialise Schools loop
-% Set the outer loop for the number of schools.
+disp('Calculating Yr 4 Pupil distributions.')
 
-% Count Schools
- NumSchools = size(SchoolsData,1);
+% Create array to store statistics for base data - distribution of Year 4 boys and girls for the population of schools.
+% Row 1 = Boys
+% Row 2 = Girls
+% Row 3 = Combined
+DataStatistics(1,1) = min(SchoolsData{:,3});
+DataStatistics(1,2) = quantile(SchoolsData{:,3},.05);
+DataStatistics(1,3) = quantile(SchoolsData{:,3},.25);
+DataStatistics(1,4) = quantile(SchoolsData{:,3},.5);
+DataStatistics(1,5) = quantile(SchoolsData{:,3},.75);
+DataStatistics(1,6) = quantile(SchoolsData{:,3},.95);
+DataStatistics(1,7) = max(SchoolsData{:,3});
 
-%% Loop through Schools
+DataStatistics(2,1) = min(SchoolsData{:,2});
+DataStatistics(2,2) = quantile(SchoolsData{:,2},.05);
+DataStatistics(2,3) = quantile(SchoolsData{:,2},.25);
+DataStatistics(2,4) = quantile(SchoolsData{:,2},.5);
+DataStatistics(2,5) = quantile(SchoolsData{:,2},.75);
+DataStatistics(2,6) = quantile(SchoolsData{:,2},.95);
+DataStatistics(2,7) = max(SchoolsData{:,2});
 
-% Loop from start (1) to end (NumSchools) in increment (1).
-for SchoolCount = 1:1:NumSchools
-    
-    NumBoys = SchoolsData.Boys_max(SchoolCount); 
-    NumGirls = SchoolsData.Girls_max(SchoolCount);
-    
-    % Initialise the bingo ball machine, for boys.
-    BingoBallMachine = LoadBalls(NumCheckForms);
-    
-    % Loop through BoyCount
-    for BoyCount = 1:1:NumBoys
-        
-        % Draw a ball - using our bingo ball machine, update the boys scorecard.
-        [BingoBallMachine,ScorecardBoys] = DrawBall(BingoBallMachine,ScorecardBoys,NumCheckForms);
-        
+DataStatistics(3,1) = min(SchoolsData{:,4});
+DataStatistics(3,2) = quantile(SchoolsData{:,4},.05);
+DataStatistics(3,3) = quantile(SchoolsData{:,4},.25);
+DataStatistics(3,4) = quantile(SchoolsData{:,4},.5);
+DataStatistics(3,5) = quantile(SchoolsData{:,4},.75);
+DataStatistics(3,6) = quantile(SchoolsData{:,4},.95);
+DataStatistics(3,7) = max(SchoolsData{:,4});
+
+disp('Yr 4 Pupil distribution Calculations complete.')
+
+% Count Simulations to run.
+disp(['Running ' num2str(NumSimulations) ' simulations of ' num2str(NumCheckForms) ' Check Form distributions.'])
+
+for SimulationCount = 1:1:NumSimulations
+    %% Initialise Schools loop
+    % Set the outer loop for the number of schools.
+
+    % Count Schools.
+     NumSchools = size(SchoolsData,1);
+
+    %% Reset the scorecards
+    % ...
+    ScorecardGirls = zeros(1,NumCheckForms);
+    ScorecardBoys = zeros(1,NumCheckForms);
+
+    %% Initialise Schools loop
+    % Set the outer loop for the number of schools.
+
+    % Count Schools
+     NumSchools = size(SchoolsData,1);
+
+    %% Loop through Schools
+
+    % Loop from start (1) to end (NumSchools) in increment (1).
+    for SchoolCount = 1:1:NumSchools
+
+        NumBoys = SchoolsData.Boys_max(SchoolCount); 
+        NumGirls = SchoolsData.Girls_max(SchoolCount);
+
+        % Initialise the bingo ball machine, for boys.
+        BingoBallMachine = LoadBalls(NumCheckForms);
+
+        % Loop through BoyCount
+        for BoyCount = 1:1:NumBoys
+
+            % Draw a ball - using our bingo ball machine, update the boys scorecard.
+            [BingoBallMachine,ScorecardBoys] = DrawBall(BingoBallMachine,ScorecardBoys,NumCheckForms);
+
+        end
+
+        % Initialise the bingo ball machine, for girls.
+        BingoBallMachine = LoadBalls(NumCheckForms);
+
+        % Loop through GirlCount
+        for GirlCount = 1:1:NumGirls
+
+            % Draw a ball - using our bingo ball machine, update the boys scorecard.
+            [BingoBallMachine,ScorecardGirls] = DrawBall(BingoBallMachine,ScorecardGirls,NumCheckForms);
+
+        end    
+
     end
-    
-    % Initialise the bingo ball machine, for girls.
-    BingoBallMachine = LoadBalls(NumCheckForms);
-    
-    % Loop through GirlCount
-    for GirlCount = 1:1:NumGirls
-        
-        % Draw a ball - using our bingo ball machine, update the boys scorecard.
-        [BingoBallMachine,ScorecardGirls] = DrawBall(BingoBallMachine,ScorecardGirls,NumCheckForms);
-        
-    end    
-    
-end
 
-%% Update Day Books with Calculated Stats.
-%
-% Note: Abandoned using tables for the daybooks. Advantage was inbuilt row
-% headers, but disadvantages are that they are complex to manipulate, and
-% expensive (in memory) to dynamically configure (i.e. grow).
-RowCount = size(DaybookStatisticsBoys,1);
-if RowCount == 0 
+    %% Update Day Books with Calculated Stats.
+    %
+    % Note: Abandoned using tables for the daybooks. Advantage was inbuilt row
+    % headers, but disadvantages are that they are complex to manipulate, and
+    % expensive (in memory) to dynamically configure (i.e. grow).
+    
     % Add these values in a new row in the array.;
-    DaybookStatisticsBoys(1,1) = min(ScorecardBoys);
-    DaybookStatisticsBoys(1,2) = quantile(ScorecardBoys,.25);
-    DaybookStatisticsBoys(1,3) = median(ScorecardBoys);
-    DaybookStatisticsBoys(1,4) = mean(ScorecardBoys);
-    DaybookStatisticsBoys(1,5) = quantile(ScorecardBoys,.50);
-    DaybookStatisticsBoys(1,6) = quantile(ScorecardBoys,.75);
-    DaybookStatisticsBoys(1,7) = max(ScorecardBoys);
-    DaybookStatisticsBoys(1,8) = std(ScorecardBoys);
-    DaybookStatisticsBoys(1,9) = var(ScorecardBoys);
-else
-    % Add these values in a new row in the table.
-    DaybookStatisticsBoys(RowCount+1,1) = min(ScorecardBoys);
-    DaybookStatisticsBoys(RowCount+1,2) = quantile(ScorecardBoys,.25);
-    DaybookStatisticsBoys(RowCount+1,3) = median(ScorecardBoys);
-    DaybookStatisticsBoys(RowCount+1,4) = mean(ScorecardBoys);
-    DaybookStatisticsBoys(RowCount+1,5) = quantile(ScorecardBoys,.50);
-    DaybookStatisticsBoys(RowCount+1,6) = quantile(ScorecardBoys,.75);
-    DaybookStatisticsBoys(RowCount+1,7) = max(ScorecardBoys);
-    DaybookStatisticsBoys(RowCount+1,8) = std(ScorecardBoys);
-    DaybookStatisticsBoys(RowCount+1,9) = var(ScorecardBoys);
-end
+    DaybookStatisticsBoys(SimulationCount,1) = min(ScorecardBoys);
+    DaybookStatisticsBoys(SimulationCount,2) = quantile(ScorecardBoys,.25);
+    DaybookStatisticsBoys(SimulationCount,3) = mean(ScorecardBoys);
+    DaybookStatisticsBoys(SimulationCount,4) = median(ScorecardBoys);
+    DaybookStatisticsBoys(SimulationCount,5) = quantile(ScorecardBoys,.75);
+    DaybookStatisticsBoys(SimulationCount,6) = max(ScorecardBoys);
+    DaybookStatisticsBoys(SimulationCount,7) = std(ScorecardBoys);
+    DaybookStatisticsBoys(SimulationCount,8) = var(ScorecardBoys);
 
-RowCount = size(DaybookStatisticsGirls,1);
-if RowCount == 0 
     % Add these values in a new row in the array.;
-    DaybookStatisticsGirls(1,1) = min(ScorecardGirls);
-    DaybookStatisticsGirls(1,2) = quantile(ScorecardGirls,.25);
-    DaybookStatisticsGirls(1,3) = median(ScorecardGirls);
-    DaybookStatisticsGirls(1,4) = mean(ScorecardGirls);
-    DaybookStatisticsGirls(1,5) = quantile(ScorecardGirls,.50);
-    DaybookStatisticsGirls(1,6) = quantile(ScorecardGirls,.75);
-    DaybookStatisticsGirls(1,7) = max(ScorecardGirls);
-    DaybookStatisticsGirls(1,8) = std(ScorecardGirls);
-    DaybookStatisticsGirls(1,9) = var(ScorecardGirls);
-else
-    % Add these values in a new row in the table.
-    DaybookStatisticsGirls(RowCount+1,1) = min(ScorecardGirls);
-    DaybookStatisticsGirls(RowCount+1,2) = quantile(ScorecardGirls,.25);
-    DaybookStatisticsGirls(RowCount+1,3) = median(ScorecardGirls);
-    DaybookStatisticsGirls(RowCount+1,4) = mean(ScorecardGirls);
-    DaybookStatisticsGirls(RowCount+1,5) = quantile(ScorecardGirls,.50);
-    DaybookStatisticsGirls(RowCount+1,6) = quantile(ScorecardGirls,.75);
-    DaybookStatisticsGirls(RowCount+1,7) = max(ScorecardGirls);
-    DaybookStatisticsGirls(RowCount+1,8) = std(ScorecardGirls);
-    DaybookStatisticsGirls(RowCount+1,9) = var(ScorecardGirls);
+    DaybookStatisticsGirls(SimulationCount,1) = min(ScorecardGirls);
+    DaybookStatisticsGirls(SimulationCount,2) = quantile(ScorecardGirls,.25);
+    DaybookStatisticsGirls(SimulationCount,3) = mean(ScorecardGirls);
+    DaybookStatisticsGirls(SimulationCount,4) = median(ScorecardGirls);
+    DaybookStatisticsGirls(SimulationCount,5) = quantile(ScorecardGirls,.75);
+    DaybookStatisticsGirls(SimulationCount,6) = max(ScorecardGirls);
+    DaybookStatisticsGirls(SimulationCount,7) = std(ScorecardGirls);
+    DaybookStatisticsGirls(SimulationCount,8) = var(ScorecardGirls);
+
+    %% Concatenate the new Scorecard data to the bottom of the Daybooks.
+    %if size(DaybookScorecardBoys,1) == 0
+    %    DaybookScorecardBoys = ScorecardBoys;
+    %else
+    %    DaybookScorecardBoys = [DaybookScorecardBoys; ScorecardBoys];
+    %end
+
+    %if size(DaybookScorecardGirls,1) == 0
+    %    DaybookScorecardGirls = ScorecardGirls;
+    %else
+    %    DaybookScorecardGirls = [DaybookScorecardGirls; ScorecardGirls];
+    %end
+
+    % Tidy up.
+    %vars = {'RowCount'};
+    %clear(vars{:});
+
+    DaybookScorecardBoys(SimulationCount,:) = ScorecardBoys;
+    DaybookScorecardGirls(SimulationCount,:) = ScorecardGirls;
+    
+    % Report the iteration count to the command window.
+    disp(['Simulation iteration ' num2str(SimulationCount) ' complete.'])
+
 end
-
-% Tidy up.
-vars = {'RowCount'};
-clear(vars{:});
-
-%% Concatenate the new Scorecard data to the bottom of the Daybooks.
-if size(DaybookScorecardBoys,1) == 0
-    DaybookScorecardBoys = ScorecardBoys;
-else
-    DaybookScorecardBoys = [DaybookScorecardBoys; ScorecardBoys];
-end
-
-if size(DaybookScorecardGirls,1) == 0
-    DaybookScorecardGirls = ScorecardGirls;
-else
-    DaybookScorecardGirls = [DaybookScorecardGirls; ScorecardGirls];
-end
-
-% Tidy up.
-vars = {'RowCount'};
-clear(vars{:});
 
 %% Generate Bar Charts
 % Create the bar charts.
