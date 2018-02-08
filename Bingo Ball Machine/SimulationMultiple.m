@@ -92,7 +92,7 @@ for SimulationCount = 1:1:NumSimulations
     % headers, but disadvantages are that they are complex to manipulate, and
     % expensive (in memory) to dynamically configure (i.e. grow).
     
-    % Add these values in a new row in the array.;
+    % Add the ScoreCard statistics to the statistics DayBook, for the boys.
     DaybookStatisticsBoys(SimulationCount,1) = min(ScorecardBoys);
     DaybookStatisticsBoys(SimulationCount,2) = quantile(ScorecardBoys,.25);
     DaybookStatisticsBoys(SimulationCount,3) = mean(ScorecardBoys);
@@ -102,7 +102,7 @@ for SimulationCount = 1:1:NumSimulations
     DaybookStatisticsBoys(SimulationCount,7) = std(ScorecardBoys);
     DaybookStatisticsBoys(SimulationCount,8) = var(ScorecardBoys);
 
-    % Add these values in a new row in the array.;
+    % Add the ScoreCard statistics to the statistics DayBook, for the girls.
     DaybookStatisticsGirls(SimulationCount,1) = min(ScorecardGirls);
     DaybookStatisticsGirls(SimulationCount,2) = quantile(ScorecardGirls,.25);
     DaybookStatisticsGirls(SimulationCount,3) = mean(ScorecardGirls);
@@ -112,23 +112,7 @@ for SimulationCount = 1:1:NumSimulations
     DaybookStatisticsGirls(SimulationCount,7) = std(ScorecardGirls);
     DaybookStatisticsGirls(SimulationCount,8) = var(ScorecardGirls);
 
-    %% Concatenate the new Scorecard data to the bottom of the Daybooks.
-    %if size(DaybookScorecardBoys,1) == 0
-    %    DaybookScorecardBoys = ScorecardBoys;
-    %else
-    %    DaybookScorecardBoys = [DaybookScorecardBoys; ScorecardBoys];
-    %end
-
-    %if size(DaybookScorecardGirls,1) == 0
-    %    DaybookScorecardGirls = ScorecardGirls;
-    %else
-    %    DaybookScorecardGirls = [DaybookScorecardGirls; ScorecardGirls];
-    %end
-
-    % Tidy up.
-    %vars = {'RowCount'};
-    %clear(vars{:});
-
+    % Now append the ScoreCards to the ScoreCards DayBooks.
     DaybookScorecardBoys(SimulationCount,:) = ScorecardBoys;
     DaybookScorecardGirls(SimulationCount,:) = ScorecardGirls;
     
