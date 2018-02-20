@@ -123,23 +123,35 @@ end
 
 %% Generate Bar Charts
 % Create the bar charts.
-%CreateBarChartBoys(ScorecardBoys);
-%CreateBarChartGirls(ScorecardGirls);
+CreateBarChartBoys(ScorecardBoys);
+CreateBarChartGirls(ScorecardGirls);
 
 %% Generate Boxplots
 % Create the boxplots.
-%figure3 = figure('Name','Boxplot - Boys');
-%boxplot(ScorecardBoys);
-%title('Boxplot of Check Distribution - Boys');
-%ylabel('Check Form Usage Count');
+figure3 = figure('Name','Boxplot - Boys');
+boxplot(ScorecardBoys);
+title('Boxplot of Check Distribution - Boys');
+ylabel('Check Form Usage Count');
 
 % Overlay the mean as green diamonds
-%hold on
-%plot(mean(ScorecardBoys), 'dg')
-%hold off
+hold on
+plot(mean(ScorecardBoys), 'dg')
+hold off
+
+%% Generate Boxplots
+% Create the boxplots.
+figure4 = figure('Name','Boxplot - Girls');
+boxplot(ScorecardGirls);
+title('Boxplot of Check Distribution - Girls');
+ylabel('Check Form Usage Count');
+
+% Overlay the mean as green diamonds
+hold on
+plot(mean(ScorecardGirls), 'dg')
+hold off
 
 %% Generate Histograms
 % Create the histograms.
-%CreateHistogramBoys(ScorecardBoys);
-%ylabel({'Check Form Distribution'});
-%title({'Histogram of Check Distribution - Boys'});
+CreateHistogramBoys(ScorecardBoys);
+ylabel({'Check Form Distribution'});
+title({'Histogram of Check Distribution - Boys'});
